@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dive into a world of poetic expressions. A collection of thoughts, dreams, and emotions captured through words.">
+    <meta name="keywords" content="poetry, poems, emotions, creative writing, literature">
+    <meta property="og:title" content="Whispers of Words - Poetry Collection">
+    <meta property="og:description" content="Explore a captivating collection of poems, dreams, and emotions expressed through words.">
+    <meta property="og:image" content="path-to-thumbnail.jpg">
+    <meta property="og:url" content="https://example.com">
+
+    <title>Whispers of Words</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&family=Sacramento&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+            background: linear-gradient(to right, #6a82fb, #a7c5eb);
+            color: #FFFF00; /* Change text color to yellow for better visibility */
+            text-align: center; /* Center-align all text */
+            position: relative;
+            overflow: auto; /* Ensure scrolling is enabled */
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 5em;
+            margin-bottom: 10px;
+        }
+        
+        button {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(45deg, #6dd5ed, #2193b0);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out, transform 0.2s;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: linear-gradient(45deg, #90d5ec, #57c1eb);
+            transform: scale(1.05);
+        }
+        
+        .poem-card {
+            font-family: 'Sacramento', cursive;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            display: inline-block;
+            margin: 20px;
+            width: 100%; /* Adjust width to ensure each line of the poems can be shown in just one line */
+            max-width: 600px; /* Set a maximum width for better readability */
+            color: #FFFF00; /* Change text color to yellow for better visibility */
+            font-size: 1.8em; /* Increase font size for content */
+            font-weight: normal; /* Unbold the content of all poems */
+        }
+        
+        .poem-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .poem-card h3, .poem-card h4, .poem-card h5, .poem-card h6, .poem-card h7, .poem-card h8, .poem-card h9 {
+            font-size: 1.5em; /* Ensure titles are bigger */
+            font-weight: bold; /* Ensure titles are bold */
+            text-align: center; /* Center-align all texts */
+            color: #FFFF00; /* Change title color to yellow for better visibility */
+        }
+        
+        .dark-mode {
+            background: linear-gradient(to right, #184e68, #57ca85);
+            color: white;
+        }
+        
+        .dark-mode .poem-card {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        
+        .dark-mode button {
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+        }
+        
+        .dark-mode button:hover {
+            background: linear-gradient(45deg, #64b3f4, #c2e59c);
+        }
+        
+        nav {
+            font-family: 'Open Sans', sans-serif;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        
+        nav a {
+            margin: 0 15px;
+            color: #ffffff; /* Keep navigation links white */
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #90d5ec; /* Keep hover color for navigation links */
+        }
+        
+        .comment-section {
+            margin-top: 50px;
+            text-align: left;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            color: #FFFF00; /* Change text color to yellow for better visibility */
+        }
+        
+        .comment-section textarea {
+            width: 100%;
+            border-radius: 5px;
+            border: none;
+            padding: 10px;
+        }
+
+        .full-poem {
+            display: none;
+            white-space: pre-wrap; /* Ensures the poem appears in the correct line */
+        }
+
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .center-align {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop class="background-video">
+        <source src="bgr vid2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+        <h1>Welcome to Whispers of Words</h1>
+        <p>I possess a boundless imagination that allows me to dream of a world with no wars, no poverty, and plenty of harmony and mutual support. Imagination for me is not flights of fancy; it's the connecting device between what is and what could be. Seeing communities bonded through a sense of purpose, each person contributing their piece of the tapestry that is progressing with compassion is what I often dream about. Anything but a wishful daydream, it is more of a wake-up call to the rude realities of today's world. It stirs in me an ardor, fosters change, and whets my determination to make this imagination real. A compass, it guides me toward new paths, and yet, at the same time, it can become a catalyst to help me let others be inspired in the same journey. This is the prism of endless possibility from which I draw the strength to forge ahead in the work of translating ideals into action and dreams into reality.</p>
+        <h2>Poem Gallery</h2>
+        <div class="poem-card">
+            <h3>Mother's Love</h3>
+            <p>What is the sky where there are no stars?</p>
+            <button onclick="togglePoem('poem1')">Read More</button>
+            <p id="poem1" class="full-poem" style="display: none;">What is the sky where there are no stars?
+What is the sea where there are no fishes?
+What we can’t touch though we know it’s not far?
+What we can’t see though we know it exists?
+What we can just feel and receive it
+from its only owner?—our greatest mother.
+It’s something that can’t be defined
+Something that can’t be derived from us
+Something that cannot be judged
+As it’s precious
+Than any other things.
+It comes from where all the lives start
+And won’t disappear even if the lives end
+It’s the sun helping us overcome things that are harsh
+And guides us whenever we lose our directions.
+It’s mother’s love
+which is higher than sky and larger than sea
+which we can feel or receive
+but cannot touch or see.
+<span class="center-align">It’s mother’s love.</span>
+            </p>
+        </div>
+        <div class="poem-card">
+            <h3>2021</h3>
+            <p>2020- The year full of turbulence</p>
+            <button onclick="togglePoem('poem2')">Read More</button>
+            <p id="poem2" class="full-poem" style="display: none;">2020- The year full of turbulence
+Stir up the race of the human 
+But now at this moment
+We're here with our confidence
+In solving this situation
+And welcoming the new year
+Without tears,
+Fears,
+And regrets.
+            </p>
+        </div>
+        <div class="poem-card">
+            <h3>2022</h3>
+            <p>Another challenging year rolled by</p>
+            <button onclick="togglePoem('poem3')">Read More</button>
+            <p id="poem3" class="full-poem" style="display: none;">Another challenging year rolled by,
+There were people exhausted,
+and there were people died...
+Another fight with an unknown ending,
+A fight against issues that are nagging.
+Another year witnessed many an event,
+From the cry for help of Mother Earth,
+To the impotent tears of youths from Afghanistan.
+But as it's usually said
+everything has both sides,
+2021, for sure, is not besides...
+It was the year when sportsmanship surpassed the pandemic,
+It was the year of the first commercial flight into the space,
+And the opening of a new era for mankind.
+It was also the year when all limits were broken, with technology.
+That's why we have the right to believe in a brighter 2022,
+When wars and epidemics will be eradicated,
+           When the world is only the world of peace and joy.             
+            </p>
+        </div>
+        <div class="poem-card">
+            <h3>2023</h3>
+            <p>One year down, one year to go</p>
+            <button onclick="togglePoem('poem4')">Read More</button>
+            <p id="poem4" class="full-poem" style="display: none;">One year down, one year to go
+Many a party, to be thrown
+Dancing the night away, why don't you so
+Then having a hangover, will you bros?
+Out with the old, in with the new
+Turn over a new leaf, our purview
+No need to worry, or to steer (clear of the future)
+Cause what comes will come
+What must be, must be
+And we have the right to hope, definitely 
+For a lovely-dovey New Year
+As what they did in the days of Auld Lang Syne
+With a glass of bubbly at midnight
+  "Happy New Year, oh my dears !"
+            </p>
+        </div>
+        <div class="poem-card">
+            <h3>2024</h3>
+            <p>When it chimed the midnight</p>
+            <button onclick="togglePoem('poem5')">Read More</button>
+            <p id="poem5" class="full-poem" style="display: none;">When it chimed the midnight
+I saw it dimmed the moonlight
+As I followed the fireworks
+I found something out of the world.
+That is the time of the year
+At which the future appears
+Albeit people all cheer
+I just feel so drear.
+Hitherto poetry had long thewed
+Ring out the old, ring in the new
+But it seems to be askew
+The future without you.
+I wonder whether it is a fate
+To start with a clean slate
+And it brings me heartache
+Whenever I contemplate.
+It leaves me to ponder tho
+How deeply was I preoccupied
+In thy dovey ardor
+In thy fervency galore. 
+My dream of its fondest
+Telling deity in the starlit
+Not to shake things up a bit
+               Not to mess things up a whit.               
+            </p>
+        </div>
+        <div class="poem-card">
+            <h3>2025</h3>
+            <p>Today is the first day of the rest of my life</p>
+            <button onclick="togglePoem('poem6')">Read More</button>
+            <p id="poem6" class="full-poem" style="display: none;">Today is the first day of the rest of my life
+under the past, I draw a line
+no longer weep or dwell on cry
+my future beckons with hopes so rife.
+The highs and lows, they’ve sapped my might,
+out of me, they’ve scared a daylight
+But courage sparks in the dead of night
+Trials faced, endless fight, and my path alight.
+Soon I realized nothing ventured, nothing gained
+without the leap, the dream’s constrained
+Having transcended pain, I opened the door to
+the endeavors that I had long wooed.
+I give a crap about moments that last,
+not the crap of regrets that belong to the past
+Turn the page, guide the sage
+to ring in the new and ring out the aged.
+Like a lighthouse, I flashily dressed
+take in a breath of air that’s fresh
+with every step, my spirit’s blessed
+A change, it is, as good as a rest.
+Be there with bells on, I’ll laugh and shine
+through ups and downs, this path is mine
+with every challenge, I’ll rise and strive,
+so I wreathe my pride in gold
+               for the rest of my life.               
+            </p>
+        </div>
+        <div class="poem-card">
+            <h3>Kismet</h3>
+            <p>A glance, a plan, an orchestrated chance</p>
+            <button onclick="togglePoem('poem7')">Read More</button>
+            <p id="poem7" class="full-poem" style="display: none;">A glance, a plan, an orchestrated chance
+Smitten, I stand, with my heart remanded
+It was only then that I comprehended
+what lay between us was beyond friend
+‘It has kept me up for nights & days
+lingering in my headspace’,
+and it takes my breath away
+as thou talk, my mind ablaze
+Thou dropped the L bomb, dreamily
+Engulfed me in redamancy
+Oh! My one and only
+In thy embrace, I long to be.
+Thy words of endearment
+Instilled in me a belief fervent
+that me and thee, certain
+is a match made in heaven.
+Love makes my world go round
+in ways I cannot count
+But also it helps me surmount
+the hurdles scattered around.
+Oh! My type on paper
+I see thou fear the future
+But my dearest lover,
+Absence makes our hearts grow fonder.
+Oh! The love of my life
+The one sets my heart alight
+My only ride-or-die
+               In thy touch, I’m forever tied.             
+            </p>
+        </div>
+    </div>
+
+    <div id="contact" style="padding-top: 50px; margin-top: 50px;">
+        <h2>Contact Me</h2>
+        <p>If you have any questions or feedback, feel free to reach out.</p>
+        <p>Email: <a href="mailto:etl.un.ng@gmail.com">etl.un.ng@gmail.com</a></p>
+    </div>
+
+    <div class="comment-section" id="comment-section">
+        <h2>Leave a Comment</h2>
+        <textarea id="comment-input" placeholder="Write your comment here..." rows="4"></textarea>
+        <button onclick="addComment()">Submit</button>
+        <div id="comments-display"></div> <!-- Comments will be displayed here -->
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            console.log('Theme toggled');
+        }
+
+        function addComment() {
+            const input = document.getElementById('comment-input');
+            const commentsDisplay = document.getElementById('comments-display');
+
+            if (input.value.trim()) {
+                const comment = document.createElement('p');
+                comment.textContent = input.value;
+                commentsDisplay.appendChild(comment);
+                console.log('Comment added:', input.value);
+                input.value = '';
+            }
+        }
+
+        function togglePoem(poemId) {
+            const poem = document.getElementById(poemId);
+            if (poem.style.display === 'none') {
+                poem.style.display = 'block';
+                console.log('Poem displayed:', poemId);
+            } else {
+                poem.style.display = 'none';
+                console.log('Poem hidden:', poemId);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            color: #333;
+            background-image: url('wallpaper 1.jpg');
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-image: url('wallpaper 2.jpg');
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 28px;
+            font-weight: bold;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        .section {
+            margin-top: 20px;
+            position: relative;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: #333;
+        }
+        .entry {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        .entry::before {
+            content: '•';
+            position: absolute;
+            left: -5px;
+            top: 5px;
+            font-size: 20px;
+            color: #333;
+        }
+        .entry h3 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .entry p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .entry ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+        .entry ul li {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Uyen-Nhi Nguyen</h1>
+    
+    <h2>Education and Achievements</h2>
+    <div class="section">
+        <div class="timeline">
+            <div class="entry">
+                <h3>Ly Tu Trong High School for the Gifted</h3>
+                <p><i>English major</i></p>
+                <ul>
+                    <li>GPA: 9.2/10</li>
+                    <li>2nd place in English Natural Science Contest 2020 (95th percentile).</li>
+                    <li>3rd place in English Excellent Students Contest 2020 (90th percentile).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2>Leadership Experience</h2>
+    <div class="section">
+        <div class="timeline">
+            <div class="entry">
+                <h3>TRAM Project</h3>
+                <p><i>Founder and Manager, 4-5hrs/week</i></p>
+                <ul>
+                    <li>Captured more than 6,000 social media followers in 5 months.</li>
+                    <li>Received more than 200 application forms after 1 month of launching.</li>
+                    <li>Led a team of more than 50 members to organize an event series both online and offline that welcomed a total of 300 participants.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2>Work Experience</h2>
+    <div class="section">
+        <div class="timeline">
+            <div class="entry">
+                <h3>IELTS Hiking</h3>
+                <p><i>Marketing Intern, 2025</i></p>
+                <ul>
+                    <li>Managed social media campaigns, increasing engagement by 30%.</li>
+                    <li>Developed content strategies that reached over 10,000 users.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <h3>UNI English</h3>
+                <p><i>Sales Intern, 2024</i></p>
+                <ul>
+                    <li>Assisted in sales strategy development, boosting enrollments by 15%.</li>
+                    <li>Interacted with clients to understand their needs and improve service offerings.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2>Skills & Certifications</h2>
+    <div class="section">
+        <div class="timeline">
+            <div class="entry">
+                <h3>Skills</h3>
+                <ul>
+                    <li>Content Marketing & Social Media Management</li>
+                    <li>Event Planning & Team Leadership</li>
+                    <li>Public Speaking & Communication</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <h3>Certifications</h3>
+                <ul>
+                    <li>IELTS 8.0</li>
+                    <li>Google Digital Marketing Certification</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
