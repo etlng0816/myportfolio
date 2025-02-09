@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Feedback about Uyen-Nhi Nguyen.">
+    <meta name="keywords" content="feedback, testimonials, reviews, letters">
+    <meta property="og:title" content="Feedback about Uyen-Nhi Nguyen">
+    <meta property="og:description" content="Read feedback and testimonials about Uyen-Nhi Nguyen.">
+    <meta property="og:image" content="path-to-thumbnail.jpg">
+    <meta property="og:url" content="https://example.com">
+
+    <title>Feedback about Uyen-Nhi Nguyen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&family=Sacramento&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+            background: linear-gradient(to right, #6a82fb, #a7c5eb);
+            color: #f6f491; /* Change text color to yellow for better visibility */
+            text-align: center; /* Center-align all text */
+            position: relative;
+            overflow: auto; /* Ensure scrolling is enabled */
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 5em;
+            margin-bottom: 10px;
+        }
+        
+        button {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(45deg, #6dd5ed, #2193b0);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out, transform 0.2s;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: linear-gradient(45deg, #90d5ec, #57c1eb);
+            transform: scale(1.05);
+        }
+        
+        .feedback-card {
+            font-family: Garamond, serif;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            display: inline-block;
+            margin: 10px;
+            width: 45%; /* Adjust width to fit 2 cards per row */
+            color: #FFFF00; /* Change text color to yellow for better visibility */
+            font-size: 1em; /* Adjust font size for content */
+            font-weight: normal; /* Unbold the content */
+        }
+        
+        .feedback-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feedback-card h3 {
+            font-size: 1.2em; /* Ensure titles are bigger */
+            font-weight: bold; /* Ensure titles are bold */
+            text-align: center; /* Center-align all texts */
+            color: #f6f491; /* Change title color to yellow for better visibility */
+        }
+        
+        .dark-mode {
+            background: linear-gradient(to right, #184e68, #57ca85);
+            color: white;
+        }
+        
+        .dark-mode .feedback-card {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        
+        .dark-mode button {
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+        }
+        
+        .dark-mode button:hover {
+            background: linear-gradient(45deg, #64b3f4, #c2e59c);
+        }
+        
+        nav {
+            font-family: 'Open Sans', sans-serif;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        
+        nav a {
+            margin: 0 15px;
+            color: #ffffff; /* Keep navigation links white */
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #90d5ec; /* Keep hover color for navigation links */
+        }
+        
+        .comment-section {
+            margin-top: 50px;
+            text-align: left;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            color: #FFFF00; /* Change text color to yellow for better visibility */
+        }
+        
+        .comment-section textarea {
+            width: 100%;
+            border-radius: 5px;
+            border: none;
+            padding: 10px;
+        }
+
+        .full-feedback {
+            display: none;
+            white-space: pre-wrap; /* Ensures the feedback appears in the correct line */
+        }
+
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .center-align {
+            text-align: center;
+        }
+
+        .feedback-form {
+            margin-top: 50px;
+            text-align: left;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            color: #FFFF00; /* Change text color to yellow for better visibility */
+        }
+
+        .feedback-form textarea, .feedback-form input {
+            width: 100%;
+            border-radius: 5px;
+            border: none;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .feedback-display {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop class="background-video">
+        <source src="bgr vid2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+        <h1>Uyen-Nhi's Sugar Cubes</h1>
+        <div class="feedback-card">
+            <h3>SuCu #1</h3>
+            <p>From: Phuong-Anh Doan (Former President at CNH Broadcasting Channel)</p>
+            <button onclick="toggleFeedback('feedback1-eng')">Eng</button>
+            <button onclick="toggleFeedback('feedback1-vie')">Vie</button>
+            <p id="feedback1-eng" class="full-feedback" style="display: none;">Bello lil’ Nhi Uyển :'>
+<br>I still remember when you first joined CBC. You were all over the group chats, so active that everyone thought you were an HR member. But in person? You were quiet as a mouse, all shy and reserved. Especially that First Meeting session—clinging to Bê, solving math problems, and getting all pouty when someone walked past without greeting you. But what stood out to me the most was how eager and reliable you were when it came to events and tasks. (Of course, I later found out that part of the reason was because you’re an ambitious little Leo. :”)</br>
+<br>Jokes aside, when it came time to choose the next CBC Prez, I had zero doubts. Throughout your time on the Broadcasting team, you showed everyone the kind of person you are—a small girl with big energy, someone who never stops pushing forward, always willing to help and support those around her. Even just chatting with you gave me new perspectives. I always joked about your fresh green eyes (aka that youthful idealism), but truthfully, every conversation—long or short—taught me something new.</br>
+<br>And I have to say, you are amazing (like, seriously amazing). You’re strong-willed, capable, and unafraid to take action for what you believe in. Reading your reflections on CBC, I see the deep love you have for this special home and everyone in it. With everything I’ve seen in you, I have no doubt you’ll take CBC even further, leading it toward the dreams past generations didn’t get to achieve.</br>
+<br>Finally, thank you—thank you for loving CBC, for everything you’ve done, are doing, and will continue to do, with all your heart. ❤️</br>
+            </p>
+            <p id="feedback1-vie" class="full-feedback" style="display: none;">Bello cô em Nhi Uyển :'>
+<br>Thú thực là rất rất muốn bùng lời hứa tâm thư kia rồi, không phải vì lười viết mà là cái gì cần nói thì cũng nói rồi nên không thể viết được gì cả. Nhưng nghĩ đi nghĩ lại thì thấy như thế ác quá vì đã lỡ gieo rắc hy vọng gòi, nên thôi thì đảm bảo là chắc chắn sẽ viết (chỉ là không biết khi nào) ha!! Nhớ hồi đầu vào BC, ả ta tung hoành các group BC lắm, ai cũng cứ tưởng là nhân sự mà cứ gặp trực tiếp thì lại ngoan như cún, không hé răng nửa lời. Nhất là cái buổi fm còn e thẹn xong bám bám Bê Bê làm toán, đi qua gặp mà lỡ không chào lại ả là ả dỗi lên dỗi xuống nữa cơ. Ấn tượng nhất là khi có sự kiện hay có công việc gì thì Uyển Nhi cũng hăng hái và được việc cho phết (sau này mới biết một lý do chính nữa là do Nhi Uyển là sư tử tham vọng mưu mô)</br>
+<br>Đùa vậy thôi chứ khi quyết định chọn Uyển Nhi trở thành người kế nhiệm vị trí Chủ tịch BC, chị không phân vân một chút nào cả. Bởi trong suốt quá trình làm việc ở phân ban chuyên môn, em đã cho mọi người thấy một cô gái nhỏ với năng lượng tích cực, một người luôn nỗ lực không ngừng nghỉ, luôn giúp đỡ và hỗ trợ các bạn của mình. Một vài cuộc tán ngẫu với Uyển Nhi cũng mang tới cho chị nhiều góc nhìn mới, chị có đùa em là "đôi mắt xanh non" nhưng thực ra qua mỗi cuộc chuyện trò dù ngắn dù dài đó, chị cũng đều học hỏi được ở em rất nhiều điều thú vị.</br>
+<br>Và chị phải công nhận rằng em giỏi (rất giỏi), em bản lĩnh và dám hành động vì mục tiêu của mình. Rồi là qua những dòng cảm nhận của em về BC, chị thấy được ở em một tình yêu lớn dành cho mái nhà đặc biệt này và tất cả con người nơi đây. Với những gì chị thấy ở Uyển Nhi, chị tin rằng em sẽ đưa BC vươn xa hơn, chèo lái những nguyện ước mà thế hệ trước chưa có cơ hội thực hiện.</br>
+<br>Cuối cùng, chị muốn cảm ơn em rất nhiều, vì em đã yêu BC, vì em đã, đang và sẽ cống hiến cho BC với trái tim chân thành nhất!</br>
+            </p>
+        </div>
+        <div class="feedback-card">
+            <h3>SuCu #2</h3>
+            <p>From: Minh-Hoa Tran-Vu (Former Vice President at CNH Broadcasting Channel)</p>
+            <button onclick="toggleFeedback('feedback2-eng')">Eng</button>
+            <button onclick="toggleFeedback('feedback2-vie')">Vie</button>
+            <p id="feedback2-eng" class="full-feedback" style="display: none;">Hillu, my dear friend and little sister.
+<br>It’s been so long, I can’t even remember our first conversation, but what stuck with me was your energy—quick, lively, always on the move. The more I got to know you, the more I saw your strong personality and how unapologetically real you are. It’s amazing how you balance being both gentle and decisive, but always remember to channel your emotions wisely to make things easier for yourself.</br>
+<br>Hardworking, passionate, and full of potential—those are the words that define you. I still remember the sunny days, the rainy days—whenever there was work to be done, Uyển Nhi was always there. The tight deadlines you tackled without hesitation, the way your eyes lit up when you talked about BC with so much love and hope, and most recently, the dedication and care you put into charity work.</br>
+<br>The energetic, lovable girl of Gen 11—sometimes mature, sometimes playfully stubborn—is now the President of CBC Gen 12. I had complete faith in my decision, and now I believe in you even more. I know you’ll be an incredible leader—responsible, devoted, and unwavering in your love and commitment, no matter how tough things get.</br>
+<br>Keep that spirit alive. Stay strong, confident, and passionate in every decision you make. Chase your dreams and lead CBC to even greater heights.</br>
+<br>Love u. ❤️</br>
+            </p>
+            <p id="feedback2-vie" class="full-feedback" style="display: none;">Hillu, Người em cũng như người bạn của chị. 
+<br>Quá lâu rồi, không nhớ lần đầu mình nói chuyện với nhau là khi nào, nhưng ấn tượng sâu đậm là về cái vẻ hoạt bát, nhanh nhẹn của em. Càng tiếp xúc và rồi nhìn thấy em trong cả quá trình, chị càng thấy được cá tính mạnh mẽ và sống thật hơn ai hết của em, rất tốt khi em có thể vừa nhẹ nhàng, vừa quyết đoán, nhưng hãy luôn biết dùng cảm xúc của mình một cách đúng đắn để mọi thứ được dễ dàng.</br>
+<br>Chăm chỉ, nhiệt tình, tiềm năng là những từ ngữ dành cho em. Chị vẫn nhớ những ngày trời nắng, trời mưa, chỉ cần có việc là có mặt Uyển Nhi, những lần công việc gấp gáp mà em sẵn sàng đón nhận đầu tiên, những khi em chia sẻ về tình yêu với BC cùng đôi mắt sáng lấp lánh hi vọng, và gần đây nhất là hăng say, chỉn chu đi làm từ thiện.</br>
+<br>Uyển Nhi, con bé lúc nào cũng lanh chanh, nhiệt tình và đáng yêu, lúc thì trưởng thành, khi thì nhõng nhẽo ở Gen 11, nay đã trở thành Chủ tịch CBC Gen 12. Chị vốn dĩ đã rất tin tưởng vào sự lựa chọn của mình, nhưng chị càng tin em hơn. Chị tin em sẽ là một người dẫn dắt tốt, một người có trách nhiệm, hết mình vì tình yêu và vì lựa chọn của bản thân dù cho khó khăn đến mức nào.</br>
+<br>Hãy tiếp tục giữ vững tinh thần, nỗ lực, bản lĩnh, nhiệt huyết như em đã từng và ngày càng mạnh mẽ, tự tin trong từng quyết định để hoàn thiện những dự định mình ấp ủ, tạo nên 1 CBC với nhiều bước tiến xa hơn và thành công hơn nhé!</br> 
+<br>Love u.</br>
+            </p>
+        </div>
+        <div class="feedback-card">
+            <h3>SuCu #3</h3>
+            <p>From: Thuy-Anh Pham (Former Head of Public Relations at CNH Broadcasting Channel)</p>
+            <button onclick="toggleFeedback('feedback3-eng')">Eng</button>
+            <button onclick="toggleFeedback('feedback3-vie')">Vie</button>
+            <p id="feedback3-eng" class="full-feedback" style="display: none;">To my dear Uyển Nhi,
+<br>In my first impressions of you, I saw a funny, sweet, and lovable girl (not quite as much anymore, huh?). You were so caring and always stuck close to everyone, especially the older sisters, though your demeanor made me think you were a little indifferent to the world at times ^^. There was a period when I couldn’t quite figure out why we found it hard to talk, and I don’t even know when we became close again. But during that time when we weren’t talking much, I always felt empty, like there was a wall between us whenever we met. It was hard to explain.</br>
+<br>At work, you’re always full of energy and responsibility. You want everything to be perfect, well-organized, and top-notch. But sometimes, that sense of responsibility has taken away your bright and carefree smile without you even realizing it.</br>
+<br>When I heard you became President of CBC, I felt at ease like never before. For me, CBC has always been a place of peace where I can calm my emotions, where I can write honestly, and pour my heart out. Thank you, Uyển Nhi, for always being so passionate, for bringing so much energy, and for being a part of my life and the lives of so many who love you as much as I do. Thank you for being gentle with the world.</br>
+<br>The journey ahead will surely be long and challenging, but remember, you will never be alone. And you, Uyển Nhi, deserve all the wonderful things life has to offer. I wish you and the core team of BC Gen XII all the best!</br>
+            </p>
+            <p id="feedback3-vie" class="full-feedback" style="display: none;">Gửi em - Uyển Nhi của chị,
+<br>Trong những ấn tượng đầu tiên của chị, Uyển Nhi là cô bé hài hước, đáng yêu và dễ mến nữa (không như bây giờ cho lắm ha). Em rất tình cảm và luôn quấn quýt bên cạnh mọi người, bên cạnh các chị mặc dù trông giao diện của em làm chị cảm thấy em Nhi hơi bất cần đời một chút ^^. Cũng đã có một khoảng thời gian mà chị chẳng rõ vì sao chị em mình lại khó nói chuyện đến thế, và cũng chẳng thể rõ tự bao giờ mà chị và Nhi lại thân thiết trở lại. Nhưng trong khoảng thời gian ít nói chuyện ấy, chị luôn có cảm giác trông rỗng và khi mỗi lần gặp em thì chị thấy cứ như có một bức tường ngăn cách hai chị em mình vậy, thật khó nói mà cũng khó diễn tả.</br>
+<br>Uyển Nhi trong công việc là một người luôn đầy năng lượng và trách nhiệm. Em luôn muốn mọi thứ phải trở nên tuyệt vời và hoàn hảo nhất, chỉn chu nhất. Và cảm giác phải luôn có trách nhiệm với công việc mình làm đôi khi đã khiến em đánh mất đi nụ cười trong veo và đầy hồn nhiên tự bao giờ.</br>
+<br>Nhưng khi biết em trở thành Chủ tịch của CBC, chị lại hoàn toàn yên tâm hơn bao giờ hết. Bởi với chị, trong mắt chị và trong trái tim chị, CBC luôn là nơi yên bình và để chị vỗ về những cảm xúc khó chiều của bản thân, là nơi chị viết ra những dòng chữ chân thật với cảm xúc của mình nhất. Cảm ơn Uyển Nhi vì đã luôn nhiệt huyết, cảm ơn em vì đã luôn tràn trề sức sống như thế, và cảm ơn em vì đã trở thành một phần trong cuộc sống của chị và của rất nhiều người cũng yêu thương em như chị. Và cũng cảm ơn em vì đã luôn dịu dàng với cả thế giới.</br>
+<br>Hành trình phía trước chắc chắn sẽ rất dài và đầy chông gai, nhưng em đừng quên, em sẽ không bao giờ đơn độc và lẻ loi. Và Uyển Nhi xứng đáng với những điều tuyệt vời hơn thế. Mong mọi điều tốt đẹp sẽ tới với em và core team BC gen XII!</br>
+            </p>
+        </div>
+        <div class="feedback-card">
+            <h3>SuCu #4</h3>
+            <p>From: Bao-Nhi Truong (Former Head of Finance & External Relations at CNH Broadcasting Channel)</p>
+            <button onclick="toggleFeedback('feedback4-eng')">Eng</button>
+            <button onclick="toggleFeedback('feedback4-vie')">Vie</button>
+            <p id="feedback4-eng" class="full-feedback" style="display: none;">I had the chance to work with Uyển Nhi for a short time during Prom 23. To me, you have always been someone incredibly dedicated—whether it was CBC or Prom, you were always hardworking and committed. I really admire that about you, and I hope you’ll always keep that fire of passion burning bright!
+<br>I believe you’ll do an amazing job as CBC President this year and continue growing in the way you envision for yourself ✧ʕ̢̣̣̣̣̩̩̩̩·͡˔·ོɁ̡̣̣̣̣̩̩̩̩✧ ৎ•ু·̫•ূॽ. The role of President carries a lot of weight, but I do not doubt that you’ll handle it brilliantly!😊</br>
+            </p>
+            <p id="feedback4-vie" class="full-feedback" style="display: none;">Chị có cơ hội làm việc cùng Uyển Nhi trong một thời gian ngắn tại Prom 23. Trong mắt chị, em luôn là một người rất nhiệt tình, dù là cbc hay prom thì em vẫn luôn chăm chỉ như vậy. Chị rất là thích tính cách này của em và hi vọng em bé sẽ luôn giữ được ngọn lửa nhiệt huyết nhó!!!! 
+<br>Chị tin em năm nay sẽ làm thật tốt vị trí chủ tịch CBC và hy vọng em sẽ ngày càng phát triển theo cái cách mà em mong muốn ✧ʕ̢̣̣̣̣̩̩̩̩·͡˔·ོɁ̡̣̣̣̣̩̩̩̩✧ ৎ•ু·̫•ূॽ Vị trí chủ tịch thật ra khá nặng nề nhưng chị tin em sẽ làm tốt ^^</br>
+            </p>
+        </div>
+        <div class="feedback-card">
+            <h3>Feedback 6</h3>
+            <p>From: Sarah Brown</p>
+            <button onclick="toggleFeedback('feedback6-eng')">Eng</button>
+            <button onclick="toggleFeedback('feedback6-vie')">Vie</button>
+            <p id="feedback6-eng" class="full-feedback" style="display: none;">Uyen-Nhi's dedication and hard work are truly commendable. She is always willing to put in the extra effort to ensure that projects are completed to the highest standard. Her positive attitude and willingness to help others make her a joy to work with. She is a true team player and I am confident that she will continue to excel in all her endeavors.</p>
+            <p id="feedback6-vie" class="full-feedback" style="display: none;">Sự cống hiến và làm việc chăm chỉ của Uyen-Nhi thực sự đáng khen ngợi. Cô ấy luôn sẵn sàng nỗ lực thêm để đảm bảo rằng các dự án được hoàn thành đạt tiêu chuẩn cao nhất. Thái độ tích cực và sự sẵn lòng giúp đỡ người khác của cô ấy khiến cô ấy trở thành một niềm vui khi làm việc cùng. Cô ấy là một người chơi đội thực sự và tôi tin tưởng rằng cô ấy sẽ tiếp tục xuất sắc trong tất cả các nỗ lực của mình.</p>
+        </div>
+        <div class="feedback-card">
+            <h3>Feedback 7</h3>
+            <p>From: William Martinez</p>
+            <button onclick="toggleFeedback('feedback7-eng')">Eng</button>
+            <button onclick="toggleFeedback('feedback7-vie')">Vie</button>
+            <p id="feedback7-eng" class="full-feedback" style="display: none;">Uyen-Nhi is a natural leader who consistently demonstrates a high level of dedication and commitment. Her ability to lead and inspire others is truly remarkable. She has a unique talent for bringing out the best in people and creating a positive and productive environment. Her contributions have been invaluable, and I have no doubt that she will continue to achieve great things in the future.</p>
+            <p id="feedback7-vie" class="full-feedback" style="display: none;">Uyen-Nhi là một nhà lãnh đạo tự nhiên, luôn thể hiện mức độ tận tâm và cam kết cao. Khả năng lãnh đạo và truyền cảm hứng cho người khác của cô ấy thực sự đáng chú ý. Cô ấy có tài năng đặc biệt trong việc phát huy tối đa tiềm năng của mọi người và tạo ra một môi trường tích cực và hiệu quả. Những đóng góp của cô ấy là vô giá, và tôi không nghi ngờ gì rằng cô ấy sẽ tiếp tục đạt được những thành tựu lớn trong tương lai.</p>
+        </div>
+        <div class="feedback-card">
+            <h3>Feedback 8</h3>
+            <p>From: Linda Garcia</p>
+            <button onclick="toggleFeedback('feedback8-eng')">Eng</button>
+            <button onclick="toggleFeedback('feedback8-vie')">Vie</button>
+            <p id="feedback8-eng" class="full-feedback" style="display: none;">Working with Uyen-Nhi has been a pleasure. She is incredibly organized and efficient, always ensuring that projects are completed on time and to the highest standard. Her attention to detail and ability to think critically have been instrumental in our success. She is a true asset to any team and I highly recommend her for any role she pursues.</p>
+            <p id="feedback8-vie" class="full-feedback" style="display: none;">Làm việc với Uyen-Nhi là một niềm vui. Cô ấy cực kỳ tổ chức và hiệu quả, luôn đảm bảo rằng các dự án được hoàn thành đúng thời hạn và đạt tiêu chuẩn cao nhất. Sự chú ý đến chi tiết và khả năng suy nghĩ phản biện của cô ấy đã đóng vai trò quan trọng trong thành công của chúng tôi. Cô ấy là một tài sản thực sự cho bất kỳ đội ngũ nào và tôi rất khuyến khích cô ấy cho bất kỳ vai trò nào mà cô ấy theo đuổi.</p>
+        </div>
+
+    <div class="feedback-form" id="feedback-form">
+        <h2>Write Your Words for Me</h2>
+        <input id="feedback-from" placeholder="Your name..." />
+        <textarea id="feedback-input" placeholder="Write your feedback here..." rows="4"></textarea>
+        <button onclick="addFeedback()">Submit</button>
+        <div id="feedback-display" class="feedback-display"></div> <!-- Feedback will be displayed here -->
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            console.log('Theme toggled');
+        }
+
+        function addComment() {
+            const input = document.getElementById('comment-input');
+            const commentsDisplay = document.getElementById('comments-display');
+
+            if (input.value.trim()) {
+                const comment = document.createElement('p');
+                comment.textContent = input.value;
+                commentsDisplay.appendChild(comment);
+                console.log('Comment added:', input.value);
+                input.value = '';
+            }
+        }
+
+        function toggleFeedback(feedbackId) {
+            const feedback = document.getElementById(feedbackId);
+            if (feedback.style.display === 'none') {
+                feedback.style.display = 'block';
+                console.log('Feedback displayed:', feedbackId);
+            } else {
+                feedback.style.display = 'none';
+                console.log('Feedback hidden:', feedbackId);
+            }
+        }
+
+        function addFeedback() {
+            const input = document.getElementById('feedback-input');
+            const feedbackDisplay = document.getElementById('feedback-display');
+            const fromInput = document.getElementById('feedback-from');
+
+            if (input.value.trim() && fromInput.value.trim()) {
+                const feedback = document.createElement('p');
+                feedback.textContent = `From: ${fromInput.value} - ${input.value}`;
+                feedbackDisplay.appendChild(feedback);
+                console.log('Feedback added:', input.value);
+                input.value = '';
+                fromInput.value = '';
+            }
+        }
+    </script>
+</body>
+</html>
